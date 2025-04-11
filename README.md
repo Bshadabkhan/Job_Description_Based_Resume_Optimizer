@@ -47,13 +47,12 @@ The optimized resume (markdown format) can also be downloaded.
 #### Prerequisites
 - Python 3.10 or higher
 - Poetry [[Installation Instructions]](https://python-poetry.org/docs/#installation)
-- Setup your GPT Model on Azure OpenAI [[Reference Video]](https://youtu.be/H_1Ge6wxaaE?si=_mv-I8w2VB7D1PhB)
 
 #### Usage
 1. Clone the repository & get into the project directory
     ```sh
-    git clone https://github.com/tezansahu/ai-garage.git
-    cd ai-garage/diagram-generator
+    git clone https://github.com/Bshadabkhan/Resume-Analyzer.git
+    cd src
     ```
 2. Install dependencies using Poetry:
     ```sh
