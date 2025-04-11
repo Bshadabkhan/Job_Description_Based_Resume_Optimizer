@@ -1,0 +1,56 @@
+analyze_job_description:
+  description: |
+    Analyze the provided job description text below and extract key insights to support an ATS‐optimized resume. The analysis should be clear, structured, and easy to incorporate into a resume. When extracting information, make sure to focus on how each element can be transformed into impactful resume bullet points and headings.
+
+    Job Description:  
+    {job_description}
+
+    **Key steps and considerations:**
+    1. **Summarize Objectives:** Concisely summarize the role’s core objectives and expectations.
+    2. **Extract Qualifications:** Identify both the required and desired skills, qualifications, and experiences.
+    3. **Highlight Key Competencies:** Emphasize technical and soft skills critical to the role.
+    4. **Identify Keywords:** Extract all relevant short and long-tail keywords (industry-specific terms, software names, certifications, etc.) that are optimal for ATS.
+    5. **Formatting Hints:** Recommend keywords or phrases that can later be highlighted in the resume.  
+       
+    **Focus on:**
+    - Extracting concrete, must-have competencies.
+    - Understanding the role’s primary priorities.
+    - Aligning extracted data with current industry trends.
+    - Ensuring clarity and structure that can be seamlessly used to fine-tune a resume.
+
+  expected_output: |
+    A detailed analysis report containing:
+    - A summary of the role’s primary objectives.
+    - A comprehensive list of core competencies and skills, both technical and soft.
+    - An extensive set of ATS-friendly keywords and phrases.
+    - Clear, structured suggestions suitable for use as bullet points or headings in a resume.
+    
+  agent: job_description_analyzer
+
+fine_tune_resume:
+  description: |
+    Using the original resume content from the file at {resume_path} and the analysis provided from the job description, rewrite the entire resume as a well-formatted Markdown document. The optimized resume should be visually attractive when pasted into a word processor, easily parsed by ATS systems, and truthful to the candidate's actual skills and experience.
+
+    **Key aspects and formatting instructions:**
+    1. **Incorporate Job-Relevant Terminology:** Insert job-specific keywords and phrases wherever they naturally align with the candidate’s background.
+    2. **ATS Optimization:** Integrate all the essential keywords and skill phrases to ensure maximum compatibility with automated resume screening systems.
+    3. **Highlight Impact:** Use bullet points to clearly quantify achievements or outline impact in each role.
+    4. **Visual Formatting:** 
+       - **Bold Section Titles:** Ensure titles like **Name**, **Summary**, **Education**, **Experience**, etc., are bold-faced.
+       - **Font Size Indicators:** Where appropriate, indicate a larger or distinct heading font style using Markdown (e.g., using `#` for primary titles and `##` for subheadings).
+       - **Proper Indentation:** Use consistent indentation and spacing for bullet points, sub-bullets, and paragraph texts to enhance readability.
+    5. **Factual Integrity:** Do **NOT** add any fabricated content. Maintain complete factual accuracy.
+    6. **Rationale Explanation:** At the end of the resume, include a brief summary explaining the optimizations made – detailing the inclusion of specific keywords, adjustments in formatting, and how these changes align with the job description.
+
+    **Focus on:**
+    - Replacing generic wording with job-specific language.
+    - Structuring the resume to highlight transferable and in-demand skills.
+    - Creating a copy-ready Markdown that, when pasted into a Word Document, retains its hierarchy and formatting cues.
+    - Providing a section that explains the reasoning behind each significant modification.
+
+  expected_output: |
+    - A revised full resume restructured and rewritten entirely in well-formatted Markdown.
+    - Sectioned, clear headings and bullet points with proper indentation (e.g., “**Name**”, “**Summary**”, “**Education**”, “**Experience**”, etc.) using Markdown syntax.
+    - A final explanatory section detailing the optimization adjustments made and the rationale behind those changes.
+    
+  agent: alignment_specialist
