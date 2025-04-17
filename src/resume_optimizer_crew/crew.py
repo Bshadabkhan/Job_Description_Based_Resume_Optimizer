@@ -361,7 +361,7 @@ from resume_optimizer_crew.tools.resume_optimization_tools import ResumeMarkdown
 load_dotenv()
 
 # Set environment variables for Gemini (LiteLLM)
-os.environ['GEMINI_API_KEY'] = 'AIzaSyAPCGXBKtGsmWaq3sHaTDTJFlWctrqbgLM'
+os.environ['GEMINI_API_KEY'] = ''
 os.environ['GEMINI_API_BASE'] = 'https://gemini.api.openai.com/v1/chat/completions'
 
 # Configure Gemini LLM via LiteLLM
